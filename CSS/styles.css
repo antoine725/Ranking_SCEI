@@ -1,0 +1,101 @@
+h1{
+	text-decoration: underline;
+	text-align: center;
+	font-size: 28px;	
+}
+
+h2{
+    text-align: left;
+	text-decoration: underline;
+	font-size: 20px;	
+}
+
+h3{
+    text-align: left;
+	text-decoration: underline;
+	font-size: 17px;	
+}
+
+body{
+	font-family: Arial;
+	color : white;
+	background-color: #242222;
+}
+
+div#content{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-left: 1em;
+}
+
+#menu_clickable{
+	padding-right: 2em;
+	width: 220px ;
+}
+
+.tier_row{
+	display: flex;
+	width: 100%;
+	min-height: 80px;
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
+	border-left: solid 1px #000;
+	border-right: solid 1px #000;
+}
+
+div#div_container{
+	margin-bottom: 0em;
+}
+
+#tier_list{
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: #000;
+	max-width: 1000px;
+}
+
+.left_box{
+	width: 100px;
+    min-height: 80px;
+    border-right: solid 1px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+}
+
+.right_box{
+    background-color: #333;
+	width: 100%;
+	box-sizing: border-box;
+	flex: 1;
+}
+
+.img_slot{
+	margin-top: 2em;
+}
+
+.draggableimg{
+	width: auto;
+	height: 80px;
+	display: inline-block;
+}
+
+.hidden {
+	display: none;
+}
+
+header{
+	text-align: center;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	align-items: center;
+    justify-content: center;
+}
+
+footer{
+	text-align: center;
+}

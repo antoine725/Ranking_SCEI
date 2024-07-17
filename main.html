@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classement écoles d'ingénieur SCEI</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/logo.png">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <script src="JS/myscripts.js"></script>
+</head>
+<body>
+
+    <!--Haut de page-->
+
+    <header>
+        <h1>Classement Post-prépa écoles d'ingénieur</h1>
+    </header>
+
+    <!--Contenu de la page-->
+
+    <!-- Menu clickable pour choisir les concours admissibles -->
+
+    <div id = "content">
+      
+      <div id ="menu_clickable">
+
+        <h2>Admissible aux oraux :</h2>
+
+        <div id="choix_concours">
+            <form>
+              <input type="checkbox" id="xens" name="xens" value="xens" data-target="div_xens" data-img="img_slot_xens" onclick="hide(this)"> X/ENS
+              <br>
+              <input type="checkbox" id="centrale" name="centrale" value="centrale" data-target="div_centrale" data-img="img_slot_centrale" onclick="hide(this)"> Centrale-Supélec
+              <br>
+              <input type="checkbox" id="mines_ponts" name="mines_ponts" value="mines_ponts" data-target="div_mines_ponts" data-img="img_slot_minesponts" onclick="hide(this)"> Mines-Ponts
+              <br>
+              <input type="checkbox" id="mines_telecom" name="mines_telecom" value="mines_telecom" data-target="div_mines_telecom" data-img="img_slot_minestel" onclick="hide(this)"> Mines-Télécom
+              <br>
+              <input type="checkbox" id="ccinp" name="ccinp" value="ccinp" data-target="div_ccinp" data-img="img_slot_ccinp" onclick="hide(this)"> CCINP
+              <br>
+              <!--<input type="checkbox" id="insa" name="insa" value="insa" data-target="div_insa" onclick="hide(this)"> INSA
+              <br>  -->            
+            </form>
+        </div>
+
+        <!-- Menus clickables pour choisir les écoles admissibles dans chaque concours -->
+
+        <div id="div_xens" class="hidden">
+            <h3>Banque X/ENS</h3>
+            <input type="checkbox" id="select_all_groupxens" name="select_all_groupxens" onclick="selectAll('checkbox_groupxens', this)"> Tout sélectionner
+            <form>
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_Ulm" name="ENS_Ulm" value="ENS_Ulm"> ENS Ulm
+                <br>
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_Paris_Saclay" name="ENS_Paris_Saclay" value="ENS_Paris_Saclay"> ENS Paris-Saclay
+                <br>
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_de_Lyon" name="ENS_de_Lyon" value="ENS_de_Lyon"> ENS de Lyon
+                <br>
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_Rennes_Info" name="ENS_Rennes_Info" value="ENS_Rennes_Info"> ENS Rennes Info
+                <br>
+                <input class="checkbox_groupxens" type="checkbox" id="ECOLE_POLYTECHNIQUE" name="ECOLE_POLYTECHNIQUE" value="ECOLE_POLYTECHNIQUE"> ECOLE POLYTECHNIQUE
+                <br>
+            </form>
+        </div>
+
+        <div id="div_centrale" class="hidden">
+            <h3>Banque Centrale-Supélec</h3>
+            <input type="checkbox" id="select_all_groupcentrale" name="select_all_groupcentrale" onclick="selectAll('checkbox_groupcentrale', this)"> Tout sélectionner
+            <form>
+              <input class="checkbox_groupcentrale" type="checkbox" id="CentraleSupelec" name="CentraleSupelec" value="CentraleSupelec"> CentraleSupélec - statut étudiant
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Lyon" name="Centrale_Lyon" value="Centrale_Lyon"> Centrale Lyon
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="SupOptique" name="SupOptique" value="SupOptique"> Institut d'optique Graduate School (SupOptique)
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Lille" name="Centrale_Lille" value="Centrale_Lille"> Centrale Lille
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Nantes" name="Centrale_Nantes" value="Centrale_Nantes"> Centrale Nantes
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Mediterranee" name="Centrale_Mediterranee" value="Centrale_Mediterranee"> Centrale Méditerranée
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Casablanca" name="Centrale_Casablanca" value="Centrale_Casablanca"> Centrale Casablanca
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="ENSEA_Cergy" name="ENSEA_Cergy" value="ENSEA_Cergy"> ENSEA Cergy
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Troyes" name="EPF_Troyes" value="EPF_Troyes"> EPF campus Troyes
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Montpellier" name="EPF_Montpellier" value="EPF_Montpellier"> EPF campus Montpellier
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Cachan" name="EPF_Cachan" value="EPF_Cachan"> EPF campus Cachan
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Dijon" name="ESTP_Dijon" value="ESTP_Dijon"> ESTP - campus de Dijon
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Cachan" name="ESTP_Cachan" value="ESTP_Cachan"> ESTP - campus de Cachan
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Orleans" name="ESTP_Orleans" value="ESTP_Orleans"> ESTP - campus d'Orléans
+              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Troyes" name="ESTP_Troyes" value="ESTP_Troyes"> ESTP - campus de Troyes
+              <br>
+            </form>
+        </div>
+
+        <div id="div_mines_ponts" class="hidden">
+          <h3>Banque Mines-Ponts</h3>
+          <input type="checkbox" id="select_all_groupminesponts" name="select_all_groupminesponts" onclick="selectAll('checkbox_groupminesponts', this)"> Tout sélectionner
+          <form>
+            <input class="checkbox_groupminesponts" type="checkbox" id="Chimie_ParisTech" name="Chimie_ParisTech" value="Chimie_ParisTech"> Chimie ParisTech
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="ENSAE_Paris" name="ENSAE_Paris" value="ENSAE_Paris"> ENSAE Paris
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="ENSTA_Paris" name="ENSTA_Paris" value="ENSTA_Paris"> ENSTA Paris
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="ENSTA_Paris_Apprentissage" name="ENSTA_Paris_Apprentissage" value="ENSTA_Paris_Apprentissage"> ENSTA Paris - apprentissage
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="IMT_Atlantique" name="IMT_Atlantique" value="IMT_Atlantique"> IMT Atlantique
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="ISAE_SUPAERO_Toulouse" name="ISAE_SUPAERO_Toulouse" value="ISAE_SUPAERO_Toulouse"> ISAE - SUPAERO Toulouse
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Nancy" name="MINES_Nancy" value="MINES_Nancy"> MINES de NANCY
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Saint_Etienne" name="MINES_Saint_Etienne" value="MINES_Saint_Etienne"> MINES SAINT-ETIENNE
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Paris" name="MINES_Paris" value="MINES_Paris"> MINES Paris
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="PONTS_ParisTech" name="PONTS_ParisTech" value="PONTS_ParisTech"> PONTS ParisTech
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="TELECOM_Paris" name="TELECOM_Paris" value="TELECOM_Paris"> TELECOM Paris
+            <br>
+            <input class="checkbox_groupminesponts" type="checkbox" id="TELECOM_Paris_Apprentissage" name="TELECOM_Paris_Apprentissage" value="TELECOM_Paris_Apprentissage"> TELECOM Paris - Apprentissage
+            <br>
+          </form>
+        </div>
+
+        <div id="div_mines_telecom" class="hidden">
+          <h3>Banque Mines-Télécom</h3>
+          <input type="checkbox" id="select_all_groupminestel" name="select_all_groupminestel" onclick="selectAll('checkbox_groupminestel', this)"> Tout sélectionner
+          <form>
+            <input class="checkbox_groupminestel" type="checkbox" id="EIVP_Paris_Civil" name="EIVP_Paris_Civil" value="EIVP_Paris_Civil"> EIVP Paris Civil
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Nancy" name="ENSG_Nancy" value="ENSG_Nancy"> ENSG Nancy
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Geomatique_Marne_la_Vallee" name="ENSG_Geomatique_Marne_la_Vallee" value="ENSG_Geomatique_Marne_la_Vallee"> ENSG-Géomatique Marne la Vallée
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire" name="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire" value="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire"> ENSG-Géomatique Marne la Vallée Fonctionnaire
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSIIE_Evry" name="ENSIIE_Evry" value="ENSIIE_Evry"> ENSIIE Evry
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSSAT_Lannion" name="ENSSAT_Lannion" value="ENSSAT_Lannion"> ENSSAT Lannion
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSTA_Bretagne_Etudiant" name="ENSTA_Bretagne_Etudiant" value="ENSTA_Bretagne_Etudiant"> ENSTA Bretagne (filière sous statut étudiant)
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSTA_Bretagne_IETA" name="ENSTA_Bretagne_IETA" value="ENSTA_Bretagne_IETA"> ENSTA Bretagne (filière sous statut IETA - Direction Générale de l'Armement)
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENTPE_Lyon_Civil" name="ENTPE_Lyon_Civil" value="ENTPE_Lyon_Civil"> ENTPE Lyon Civil
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="ENTPE_Lyon_Fonctionnaire" name="ENTPE_Lyon_Fonctionnaire" value="ENTPE_Lyon_Fonctionnaire"> ENTPE Lyon Fonctionnaire
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="EURECOM" name="EURECOM" value="EURECOM"> EURECOM
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Mines_Albi" name="IMT_Mines_Albi" value="IMT_Mines_Albi"> IMT Mines Albi
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Mines_Ales" name="IMT_Mines_Ales" value="IMT_Mines_Ales"> IMT Mines Alès
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Nord_Europe" name="IMT_Nord_Europe" value="IMT_Nord_Europe"> IMT Nord Europe
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="Mines_Saint_Etienne_ISMIN" name="Mines_Saint_Etienne_ISMIN" value="Mines_Saint_Etienne_ISMIN"> Mines Saint Etienne-ISMIN
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_Nancy" name="TELECOM_Nancy" value="TELECOM_Nancy"> TELECOM Nancy
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="Telecom_Physique_Strasbourg" name="Telecom_Physique_Strasbourg" value="Telecom_Physique_Strasbourg"> Télécom Physique Strasbourg Informatique et Réseaux
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_St_Etienne" name="TELECOM_St_Etienne" value="TELECOM_St_Etienne"> TELECOM St Etienne - Statut étudiant
+            <br>
+            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_SudParis" name="TELECOM_SudParis" value="TELECOM_SudParis"> TELECOM SudParis
+            <br>
+          </form>
+        </div>
+
+        <div id="div_ccinp" class="hidden">
+          <h3>Banque CCINP</h3>
+          <input type="checkbox" id="select_all_groupccinp" name="select_all_groupccinp" onclick="selectAll('checkbox_groupccinp', this)"> Tout sélectionner
+          <form>
+            <input class="checkbox_groupccinp" type="checkbox" id="Bordeaux_INP_ENSC_Cognitique" name="Bordeaux_INP_ENSC_Cognitique" value="Bordeaux_INP_ENSC_Cognitique"> Bordeaux INP - ENSC Cognitique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Bordeaux_INP_ENSEIRB_MATMECA_Electronique" name="Bordeaux_INP_ENSEIRB_MATMECA_Electronique" value="Bordeaux_INP_ENSEIRB_MATMECA_Electronique"> Bordeaux INP - ENSEIRB-MATMECA Electronique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Bordeaux_INP_ENSEIRB_MATMECA_Informatique" name="Bordeaux_INP_ENSEIRB_MATMECA_Informatique" value="Bordeaux_INP_ENSEIRB_MATMECA_Informatique"> Bordeaux INP - ENSEIRB-MATMECA Informatique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Bordeaux_INP_ENSEIRB_MATMECA_Mathematiques_Mecanique" name="Bordeaux_INP_ENSEIRB_MATMECA_Mathematiques_Mecanique" value="Bordeaux_INP_ENSEIRB_MATMECA_Mathematiques_Mecanique"> Bordeaux INP - ENSEIRB-MATMECA Mathématiques et Mécanique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Bordeaux_INP_ENSEIRB_MATMECA_Telecom" name="Bordeaux_INP_ENSEIRB_MATMECA_Telecom" value="Bordeaux_INP_ENSEIRB_MATMECA_Telecom"> Bordeaux INP - ENSEIRB-MATMECA Télecom.
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Bordeaux_INP_ENSPIMA" name="Bordeaux_INP_ENSPIMA" value="Bordeaux_INP_ENSPIMA"> Bordeaux INP - ENSPIMA
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Clermont_Auvergne_INP_ISIMA" name="Clermont_Auvergne_INP_ISIMA" value="Clermont_Auvergne_INP_ISIMA"> Clermont Auvergne INP - ISIMA
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Clermont_Auvergne_INP_SIGMA_mecanique" name="Clermont_Auvergne_INP_SIGMA_mecanique" value="Clermont_Auvergne_INP_SIGMA_mecanique"> Clermont Auvergne INP - SIGMA - mécanique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="CPE_LYON_Sciences_du_numerique" name="CPE_LYON_Sciences_du_numerique" value="CPE_LYON_Sciences_du_numerique"> CPE LYON Sciences du numérique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="CY_TECH_Cergy_Pau_Informatique" name="CY_TECH_Cergy_Pau_Informatique" value="CY_TECH_Cergy_Pau_Informatique"> CY TECH Cergy-Pau - Informatique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="CY_TECH_Cergy_Pau_Mathematiques" name="CY_TECH_Cergy_Pau_Mathematiques" value="CY_TECH_Cergy_Pau_Mathematiques"> CY TECH Cergy-Pau - Mathématiques
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENAC_Toulouse_Civil" name="ENAC_Toulouse_Civil" value="ENAC_Toulouse_Civil"> ENAC Toulouse Civil
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENAC_Toulouse_Fonctionnaire" name="ENAC_Toulouse_Fonctionnaire" value="ENAC_Toulouse_Fonctionnaire"> ENAC Toulouse Fonctionnaire
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENGEES_Strasbourg_Civil" name="ENGEES_Strasbourg_Civil" value="ENGEES_Strasbourg_Civil"> ENGEES Strasbourg Civil (étudiant)
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSAI_Rennes_Civil" name="ENSAI_Rennes_Civil" value="ENSAI_Rennes_Civil"> ENSAI Rennes Civil
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSAI_Rennes_Fonctionnaire" name="ENSAI_Rennes_Fonctionnaire" value="ENSAI_Rennes_Fonctionnaire"> ENSAI Rennes Fonctionnaire (Attaché INSEE)
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSGTI_Pau_Energetique" name="ENSGTI_Pau_Energetique" value="ENSGTI_Pau_Energetique"> ENSGTI Pau - Energétique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSGTI_Pau_Genie_des_Procedes" name="ENSGTI_Pau_Genie_des_Procedes" value="ENSGTI_Pau_Genie_des_Procedes"> ENSGTI Pau - Génie des Procédés
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSICAEN_Genie_Physique" name="ENSICAEN_Genie_Physique" value="ENSICAEN_Genie_Physique"> ENSICAEN Génie Physique et systèmes Embarqués
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSICAEN_Informatique" name="ENSICAEN_Informatique" value="ENSICAEN_Informatique"> ENSICAEN Informatique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Grenoble_INP_ENSE3" name="Grenoble_INP_ENSE3" value="Grenoble_INP_ENSE3"> Grenoble INP - ENSE3
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Grenoble_INP_ENSIMAG" name="Grenoble_INP_ENSIMAG" value="Grenoble_INP_ENSIMAG"> Grenoble INP - ENSIMAG
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Grenoble_INP_Esisar" name="Grenoble_INP_Esisar" value="Grenoble_INP_Esisar"> Grenoble INP - Esisar
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Grenoble_INP_Pagora" name="Grenoble_INP_Pagora" value="Grenoble_INP_Pagora"> Grenoble INP - Pagora
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Grenoble_INP_Phelma" name="Grenoble_INP_Phelma" value="Grenoble_INP_Phelma"> Grenoble INP - Phelma (Physique Electronique Télécoms)
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ISAE_ENSMA_Poitiers" name="ISAE_ENSMA_Poitiers" value="ISAE_ENSMA_Poitiers"> ISAE-ENSMA Poitiers
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ISAE_Supmeca_Paris" name="ISAE_Supmeca_Paris" value="ISAE_Supmeca_Paris"> ISAE-Supméca Paris
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Lorraine_INP_ENSEM_Energie" name="Lorraine_INP_ENSEM_Energie" value="Lorraine_INP_ENSEM_Energie"> Lorraine INP - ENSEM - Energie
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Lorraine_INP_ENSEM_Spec_systemes_numeriques" name="Lorraine_INP_ENSEM_Spec_systemes_numeriques" value="Lorraine_INP_ENSEM_Spec_systemes_numeriques"> Lorraine INP - ENSEM - Spécialité des systèmes numériques
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Lorraine_INP_ENSIC" name="Lorraine_INP_ENSIC" value="Lorraine_INP_ENSIC"> Lorraine INP - ENSIC
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="SeaTech_Toulon" name="SeaTech_Toulon" value="SeaTech_Toulon"> SeaTech Toulon
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="SUPMICROTECH_ENSMM_Besancon" name="SUPMICROTECH_ENSMM_Besancon" value="SUPMICROTECH_ENSMM_Besancon"> SUPMICROTECH ENSMM Besançon
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="TELECOM_PHYSIQUE_Strasbourg" name="TELECOM_PHYSIQUE_Strasbourg" value="TELECOM_PHYSIQUE_Strasbourg"> TELECOM PHYSIQUE Strasbourg
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Toulouse_INP_ENSEEIHT_MFEE" name="Toulouse_INP_ENSEEIHT_MFEE" value="Toulouse_INP_ENSEEIHT_MFEE"> Toulouse INP - ENSEEIHT - Mécanique des Fluides-Energetique-Environnement (MFEE)
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Toulouse_INP_ENSEEIHT_Sciences_du_Numerique" name="Toulouse_INP_ENSEEIHT_Sciences_du_Numerique" value="Toulouse_INP_ENSEEIHT_Sciences_du_Numerique"> Toulouse INP - ENSEEIHT - Sciences du Numérique
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Toulouse_INP_ENSIACET_Genie_Industriel" name="Toulouse_INP_ENSIACET_Genie_Industriel" value="Toulouse_INP_ENSIACET_Genie_Industriel"> Toulouse INP - ENSIACET - Génie Industriel
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="Grenoble_INP_Genie_industriel" name="Grenoble_INP_Genie_industriel" value="Grenoble_INP_Genie_industriel"> Grenoble INP - Génie industriel
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSIL_ENSCI_Limoges_Electronique_Telecommunications" name="ENSIL_ENSCI_Limoges_Electronique_Telecommunications" value="ENSIL_ENSCI_Limoges_Electronique_Telecommunications"> ENSIL - ENSCI Limoges Electronique et Télécommunications
+            <br>
+            <input class="checkbox_groupccinp" type="checkbox" id="ENSIL_ENSCI_Limoges_Mecatronique" name="ENSIL_ENSCI_Limoges_Mecatronique" value="ENSIL_ENSCI_Limoges_Mecatronique"> ENSIL - ENSCI Limoges Mécatronique
+            <br>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Tableau tier list -->
+
+      <div id ="tier_list">
+
+        <div id="div_container">
+          <div class="tier_row">
+            <div id = "one" class = "left_box" contenteditable="true" style="background-color: rgb(255, 127, 127);">
+              Most Wanted
+            </div>
+            <div class = "right_box"></div>
+          </div>
+          <div class="tier_row">
+            <div id = "two" class = "left_box"  contenteditable="true" style="background-color: rgb(255, 191, 127);">
+              Second Choix
+            </div>
+            <div class = "right_box"></div>
+          </div>
+          <div class="tier_row">
+            <div id = "three" class = "left_box" contenteditable="true" style="background-color: rgb(255, 255, 127);">
+              Bonnes Options
+            </div>
+            <div class = "right_box"></div>
+          </div>
+          <div class="tier_row">
+            <div id = "four" class = "left_box" contenteditable="true" style="background-color: rgb(127, 255, 127);">
+              Ok tier
+            </div>
+            <div class = "right_box"></div>
+          </div>
+          <div class="tier_row">
+            <div id = "five" class = "left_box" contenteditable="true" style="background-color: rgb(127, 255, 255);">
+              Pfff azi
+            </div>
+            <div class = "right_box"></div>
+          </div>
+          <div class="tier_row">
+            <div id = "six" class = "left_box" contenteditable="true" style="background-color: rgb(127, 127, 255);">
+              Ca part en 5/2
+            </div>
+            <div class = "right_box"></div>
+          </div>
+        </div>
+
+        <!-- Tableau des différentes écoles-->
+
+        <div id="img_slot_xens" class="hidden tier_row img_slot" >
+          <div class="left_box" style="background-color: lightslategray;">
+            Banque X/ENS
+          </div>
+          <div class="right_box"></div>
+        </div>
+
+        <div id="img_slot_centrale" class="hidden tier_row img_slot" >
+          <div class="left_box" style="background-color: lightslategray;">
+            Banque Centrale- Supélec
+          </div>
+          <div class="right_box"></div>
+        </div>
+
+        <div id="img_slot_minesponts" class="hidden tier_row img_slot" >
+          <div class="left_box" style="background-color: lightslategray;">
+            Banque Mines-Ponts
+          </div>
+          <div class="right_box"></div>
+        </div>
+
+        <div id="img_slot_minestel" class="hidden tier_row img_slot" >
+          <div class="left_box" style="background-color: lightslategray;">
+            Banque Mines-Télécom
+          </div>
+          <div class="right_box"></div>
+        </div>
+
+        <div id="img_slot_ccinp" class="hidden tier_row img_slot" >
+          <div class="left_box" style="background-color: lightslategray;">
+            Banque CCINP
+          </div>
+          <div class="right_box"></div>
+        </div>
+
+      </div>
+
+    </div>
+  <!-- Bas de page -->
+
+  <footer>
+    <p>
+      Property of &copy; Bari Industries - 2024 -All Rights Reserved
+    </p>
+  </footer>
+
+</body>
+</html>
