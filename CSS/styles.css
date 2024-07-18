@@ -54,12 +54,11 @@ div#div_container{
 	flex-direction: column;
 	width: 100%;
 	color: #000;
-	max-width: 1000px;
+	margin-right: 2em;
 }
 
 .left_box{
 	width: 100px;
-    min-height: 80px;
     border-right: solid 1px #000;
     display: flex;
     align-items: center;
@@ -79,9 +78,9 @@ div#div_container{
 }
 
 .draggableimg{
-	width: auto;
 	height: 80px;
-	display: inline-block;
+	width: auto;
+	display: inline-flex;
 }
 
 .hidden {
