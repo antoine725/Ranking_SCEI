@@ -28,6 +28,21 @@ function selectAll(groupClass, selectAllCheckbox) {
         checkbox.checked = selectAllCheckbox.checked;
     });
 
+    if(selectAllCheckbox.checked){
+        checkboxes.forEach(checkbox => {
+            var targetId = checkbox.getAttribute('data-target');
+            var targetElement = document.getElementById(targetId);
+            targetElement.classList.remove('hidden');
+        })
+    }
+    else{
+        checkboxes.forEach(checkbox => {
+            var targetId = checkbox.getAttribute('data-target');
+            var targetElement = document.getElementById(targetId);
+            targetElement.classList.add('hidden');
+        })
+    }
+
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', () => {
             if (!checkbox.checked) {

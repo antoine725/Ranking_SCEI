@@ -49,15 +49,15 @@
             <h3>Banque X/ENS</h3>
             <input type="checkbox" id="select_all_groupxens" name="select_all_groupxens" onclick="selectAll('checkbox_groupxens', this)"> Tout sélectionner
             <form>
-                <input class="checkbox_groupxens" type="checkbox" id="ENS_Ulm" name="ENS_Ulm" value="ENS_Ulm"> ENS Ulm
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_Ulm" name="ENS_Ulm" value="ENS_Ulm" data-target="img_ens_ulm" onclick="hide(this)"> ENS Ulm
                 <br>
-                <input class="checkbox_groupxens" type="checkbox" id="ENS_Paris_Saclay" name="ENS_Paris_Saclay" value="ENS_Paris_Saclay"> ENS Paris-Saclay
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_Paris_Saclay" name="ENS_Paris_Saclay" value="ENS_Paris_Saclay" data-target="img_ens_saclay" onclick="hide(this)"> ENS Paris-Saclay
                 <br>
-                <input class="checkbox_groupxens" type="checkbox" id="ENS_de_Lyon" name="ENS_de_Lyon" value="ENS_de_Lyon"> ENS de Lyon
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_de_Lyon" name="ENS_de_Lyon" value="ENS_de_Lyon" data-target="img_ens_lyon" onclick="hide(this)"> ENS de Lyon
                 <br>
-                <input class="checkbox_groupxens" type="checkbox" id="ENS_Rennes_Info" name="ENS_Rennes_Info" value="ENS_Rennes_Info"> ENS Rennes Info
+                <input class="checkbox_groupxens" type="checkbox" id="ENS_Rennes_Info" name="ENS_Rennes_Info" value="ENS_Rennes_Info" data-target="img_ens_rennes" onclick="hide(this)"> ENS Rennes Info
                 <br>
-                <input class="checkbox_groupxens" type="checkbox" id="ECOLE_POLYTECHNIQUE" name="ECOLE_POLYTECHNIQUE" value="ECOLE_POLYTECHNIQUE"> ECOLE POLYTECHNIQUE
+                <input class="checkbox_groupxens" type="checkbox" id="ECOLE_POLYTECHNIQUE" name="ECOLE_POLYTECHNIQUE" data-target="img_x" value="ECOLE_POLYTECHNIQUE" onclick="hide(this)"> ECOLE POLYTECHNIQUE
                 <br>
             </form>
         </div>
@@ -66,36 +66,36 @@
             <h3>Banque Centrale-Supélec</h3>
             <input type="checkbox" id="select_all_groupcentrale" name="select_all_groupcentrale" onclick="selectAll('checkbox_groupcentrale', this)"> Tout sélectionner
             <form>
-              <input class="checkbox_groupcentrale" type="checkbox" id="CentraleSupelec" name="CentraleSupelec" value="CentraleSupelec"> CentraleSupélec - statut étudiant
+              <input class="checkbox_groupcentrale" type="checkbox" id="CentraleSupelec" name="CentraleSupelec" value="CentraleSupelec" data-target="img_centralesupelec"onclick="hide(this)"> CentraleSupélec - statut étudiant
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Lyon" name="Centrale_Lyon" value="Centrale_Lyon"> Centrale Lyon
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Lyon" name="Centrale_Lyon" value="Centrale_Lyon" data-target="img_centralelyon" onclick="hide(this)"> Centrale Lyon
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="SupOptique" name="SupOptique" value="SupOptique"> Institut d'optique Graduate School (SupOptique)
+              <input class="checkbox_groupcentrale" type="checkbox" id="SupOptique" name="SupOptique" value="SupOptique" data-target="img_supoptique" onclick="hide(this)"> Institut d'optique Graduate School (SupOptique)
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Lille" name="Centrale_Lille" value="Centrale_Lille"> Centrale Lille
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Lille" name="Centrale_Lille" value="Centrale_Lille" data-target="img_centralelille" onclick="hide(this)"> Centrale Lille
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Nantes" name="Centrale_Nantes" value="Centrale_Nantes"> Centrale Nantes
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Nantes" name="Centrale_Nantes" value="Centrale_Nantes" data-target="img_centralenantes" onclick="hide(this)"> Centrale Nantes
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Mediterranee" name="Centrale_Mediterranee" value="Centrale_Mediterranee"> Centrale Méditerranée
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Mediterranee" name="Centrale_Mediterranee" value="Centrale_Mediterranee" data-target="img_centralemed" onclick="hide(this)"> Centrale Méditerranée
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Casablanca" name="Centrale_Casablanca" value="Centrale_Casablanca"> Centrale Casablanca
+              <input class="checkbox_groupcentrale" type="checkbox" id="Centrale_Casablanca" name="Centrale_Casablanca" value="Centrale_Casablanca" data-target="img_centralecasa" onclick="hide(this)"> Centrale Casablanca
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="ENSEA_Cergy" name="ENSEA_Cergy" value="ENSEA_Cergy"> ENSEA Cergy
+              <input class="checkbox_groupcentrale" type="checkbox" id="ENSEA_Cergy" name="ENSEA_Cergy" value="ENSEA_Cergy" data-target="img_ensea" onclick="hide(this)"> ENSEA Cergy
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Troyes" name="EPF_Troyes" value="EPF_Troyes"> EPF campus Troyes
+              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Troyes" name="EPF_Troyes" value="EPF_Troyes" data-target="img_epf" onclick="hide(this)"> EPF campus Troyes
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Montpellier" name="EPF_Montpellier" value="EPF_Montpellier"> EPF campus Montpellier
+              <!-- <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Montpellier" name="EPF_Montpellier" value="EPF_Montpellier" onclick="hide(this)"> EPF campus Montpellier
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Cachan" name="EPF_Cachan" value="EPF_Cachan"> EPF campus Cachan
+              <input class="checkbox_groupcentrale" type="checkbox" id="EPF_Cachan" name="EPF_Cachan" value="EPF_Cachan" onclick="hide(this)"> EPF campus Cachan
+              <br> -->
+              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Dijon" name="ESTP_Dijon" value="ESTP_Dijon" data-target="img_estp" onclick="hide(this)"> ESTP - campus de Dijon
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Dijon" name="ESTP_Dijon" value="ESTP_Dijon"> ESTP - campus de Dijon
+              <!--<input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Cachan" name="ESTP_Cachan" value="ESTP_Cachan" onclick="hide(this)"> ESTP - campus de Cachan
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Cachan" name="ESTP_Cachan" value="ESTP_Cachan"> ESTP - campus de Cachan
+              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Orleans" name="ESTP_Orleans" value="ESTP_Orleans" onclick="hide(this)"> ESTP - campus d'Orléans
               <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Orleans" name="ESTP_Orleans" value="ESTP_Orleans"> ESTP - campus d'Orléans
-              <br>
-              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Troyes" name="ESTP_Troyes" value="ESTP_Troyes"> ESTP - campus de Troyes
-              <br>
+              <input class="checkbox_groupcentrale" type="checkbox" id="ESTP_Troyes" name="ESTP_Troyes" value="ESTP_Troyes" onclick="hide(this)"> ESTP - campus de Troyes
+              <br>-->
             </form>
         </div>
 
@@ -103,30 +103,30 @@
           <h3>Banque Mines-Ponts</h3>
           <input type="checkbox" id="select_all_groupminesponts" name="select_all_groupminesponts" onclick="selectAll('checkbox_groupminesponts', this)"> Tout sélectionner
           <form>
-            <input class="checkbox_groupminesponts" type="checkbox" id="Chimie_ParisTech" name="Chimie_ParisTech" value="Chimie_ParisTech"> Chimie ParisTech
+            <input class="checkbox_groupminesponts" type="checkbox" id="Chimie_ParisTech" name="Chimie_ParisTech" value="Chimie_ParisTech" data-target="img_enscp" onclick="hide(this)"> Chimie ParisTech
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="ENSAE_Paris" name="ENSAE_Paris" value="ENSAE_Paris"> ENSAE Paris
+            <input class="checkbox_groupminesponts" type="checkbox" id="ENSAE_Paris" name="ENSAE_Paris" value="ENSAE_Paris" data-target="img_ensae" onclick="hide(this)"> ENSAE Paris
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="ENSTA_Paris" name="ENSTA_Paris" value="ENSTA_Paris"> ENSTA Paris
+            <input class="checkbox_groupminesponts" type="checkbox" id="ENSTA_Paris" name="ENSTA_Paris" value="ENSTA_Paris" data-target="img_ensta" onclick="hide(this)"> ENSTA Paris
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="ENSTA_Paris_Apprentissage" name="ENSTA_Paris_Apprentissage" value="ENSTA_Paris_Apprentissage"> ENSTA Paris - apprentissage
+            <!--<input class="checkbox_groupminesponts" type="checkbox" id="ENSTA_Paris_Apprentissage" name="ENSTA_Paris_Apprentissage" value="ENSTA_Paris_Apprentissage" data-target="img_" onclick="hide(this)"> ENSTA Paris - apprentissage
+            <br>-->
+            <input class="checkbox_groupminesponts" type="checkbox" id="IMT_Atlantique" name="IMT_Atlantique" value="IMT_Atlantique" data-target="img_imtatlantique" onclick="hide(this)"> IMT Atlantique
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="IMT_Atlantique" name="IMT_Atlantique" value="IMT_Atlantique"> IMT Atlantique
+            <input class="checkbox_groupminesponts" type="checkbox" id="ISAE_SUPAERO_Toulouse" name="ISAE_SUPAERO_Toulouse" value="ISAE_SUPAERO_Toulouse" data-target="img_supaero" onclick="hide(this)"> ISAE - SUPAERO Toulouse
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="ISAE_SUPAERO_Toulouse" name="ISAE_SUPAERO_Toulouse" value="ISAE_SUPAERO_Toulouse"> ISAE - SUPAERO Toulouse
+            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Nancy" name="MINES_Nancy" value="MINES_Nancy" data-target="img_minesnancy" onclick="hide(this)"> MINES de NANCY
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Nancy" name="MINES_Nancy" value="MINES_Nancy"> MINES de NANCY
+            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Saint_Etienne" name="MINES_Saint_Etienne" value="MINES_Saint_Etienne" data-target="img_minessaintetienne" onclick="hide(this)"> MINES SAINT-ETIENNE
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Saint_Etienne" name="MINES_Saint_Etienne" value="MINES_Saint_Etienne"> MINES SAINT-ETIENNE
+            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Paris" name="MINES_Paris" value="MINES_Paris" data-target="img_minesparis" onclick="hide(this)"> MINES Paris
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="MINES_Paris" name="MINES_Paris" value="MINES_Paris"> MINES Paris
+            <input class="checkbox_groupminesponts" type="checkbox" id="PONTS_ParisTech" name="PONTS_ParisTech" value="PONTS_ParisTech" data-target="img_pontsparitech" onclick="hide(this)"> PONTS ParisTech
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="PONTS_ParisTech" name="PONTS_ParisTech" value="PONTS_ParisTech"> PONTS ParisTech
+            <input class="checkbox_groupminesponts" type="checkbox" id="TELECOM_Paris" name="TELECOM_Paris" value="TELECOM_Paris" data-target="img_telecomparis" onclick="hide(this)"> TELECOM Paris
             <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="TELECOM_Paris" name="TELECOM_Paris" value="TELECOM_Paris"> TELECOM Paris
-            <br>
-            <input class="checkbox_groupminesponts" type="checkbox" id="TELECOM_Paris_Apprentissage" name="TELECOM_Paris_Apprentissage" value="TELECOM_Paris_Apprentissage"> TELECOM Paris - Apprentissage
-            <br>
+            <!--<input class="checkbox_groupminesponts" type="checkbox" id="TELECOM_Paris_Apprentissage" name="TELECOM_Paris_Apprentissage" value="TELECOM_Paris_Apprentissage"> TELECOM Paris - Apprentissage
+            <br>-->
           </form>
         </div>
 
@@ -134,43 +134,43 @@
           <h3>Banque Mines-Télécom</h3>
           <input type="checkbox" id="select_all_groupminestel" name="select_all_groupminestel" onclick="selectAll('checkbox_groupminestel', this)"> Tout sélectionner
           <form>
-            <input class="checkbox_groupminestel" type="checkbox" id="EIVP_Paris_Civil" name="EIVP_Paris_Civil" value="EIVP_Paris_Civil"> EIVP Paris Civil
+            <input class="checkbox_groupminestel" type="checkbox" id="EIVP_Paris_Civil" name="EIVP_Paris_Civil" value="EIVP_Paris_Civil" data-target="img_eivp" onclick="hide(this)"> EIVP Paris Civil
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Nancy" name="ENSG_Nancy" value="ENSG_Nancy"> ENSG Nancy
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Nancy" name="ENSG_Nancy" value="ENSG_Nancy" data-target="img_ensgnancy" onclick="hide(this)"> ENSG Nancy
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Geomatique_Marne_la_Vallee" name="ENSG_Geomatique_Marne_la_Vallee" value="ENSG_Geomatique_Marne_la_Vallee"> ENSG-Géomatique Marne la Vallée
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Geomatique_Marne_la_Vallee" name="ENSG_Geomatique_Marne_la_Vallee" value="ENSG_Geomatique_Marne_la_Vallee" data-target="img_ensggéo" onclick="hide(this)"> ENSG-Géomatique Marne la Vallée
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire" name="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire" value="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire"> ENSG-Géomatique Marne la Vallée Fonctionnaire
+            <!--<input class="checkbox_groupminestel" type="checkbox" id="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire" name="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire" value="ENSG_Geomatique_Marne_la_Vallee_Fonctionnaire"> ENSG-Géomatique Marne la Vallée Fonctionnaire
+            <br>-->
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSIIE_Evry" name="ENSIIE_Evry" value="ENSIIE_Evry" data-target="img_ensiie" onclick="hide(this)"> ENSIIE Evry
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENSIIE_Evry" name="ENSIIE_Evry" value="ENSIIE_Evry"> ENSIIE Evry
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSSAT_Lannion" name="ENSSAT_Lannion" value="ENSSAT_Lannion" data-target="img_enssat" onclick="hide(this)"> ENSSAT Lannion
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENSSAT_Lannion" name="ENSSAT_Lannion" value="ENSSAT_Lannion"> ENSSAT Lannion
+            <input class="checkbox_groupminestel" type="checkbox" id="ENSTA_Bretagne_Etudiant" name="ENSTA_Bretagne_Etudiant" value="ENSTA_Bretagne_Etudiant" data-target="img_enstabretagne" onclick="hide(this)"> ENSTA Bretagne (filière sous statut étudiant)
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENSTA_Bretagne_Etudiant" name="ENSTA_Bretagne_Etudiant" value="ENSTA_Bretagne_Etudiant"> ENSTA Bretagne (filière sous statut étudiant)
+            <!--<input class="checkbox_groupminestel" type="checkbox" id="ENSTA_Bretagne_IETA" name="ENSTA_Bretagne_IETA" value="ENSTA_Bretagne_IETA"> ENSTA Bretagne (filière sous statut IETA - Direction Générale de l'Armement)
+            <br>-->
+            <input class="checkbox_groupminestel" type="checkbox" id="ENTPE_Lyon_Civil" name="ENTPE_Lyon_Civil" value="ENTPE_Lyon_Civil" data-target="img_entpe" onclick="hide(this)"> ENTPE Lyon Civil
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENSTA_Bretagne_IETA" name="ENSTA_Bretagne_IETA" value="ENSTA_Bretagne_IETA"> ENSTA Bretagne (filière sous statut IETA - Direction Générale de l'Armement)
+            <!--<input class="checkbox_groupminestel" type="checkbox" id="ENTPE_Lyon_Fonctionnaire" name="ENTPE_Lyon_Fonctionnaire" value="ENTPE_Lyon_Fonctionnaire"> ENTPE Lyon Fonctionnaire
+            <br>-->
+            <input class="checkbox_groupminestel" type="checkbox" id="EURECOM" name="EURECOM" value="EURECOM" data-target="img_eurecom" onclick="hide(this)"> EURECOM
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENTPE_Lyon_Civil" name="ENTPE_Lyon_Civil" value="ENTPE_Lyon_Civil"> ENTPE Lyon Civil
+            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Mines_Albi" name="IMT_Mines_Albi" value="IMT_Mines_Albi" data-target="img_minesalbi" onclick="hide(this)"> IMT Mines Albi
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="ENTPE_Lyon_Fonctionnaire" name="ENTPE_Lyon_Fonctionnaire" value="ENTPE_Lyon_Fonctionnaire"> ENTPE Lyon Fonctionnaire
+            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Mines_Ales" name="IMT_Mines_Ales" value="IMT_Mines_Ales" data-target="img_minesales" onclick="hide(this)"> IMT Mines Alès
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="EURECOM" name="EURECOM" value="EURECOM"> EURECOM
+            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Nord_Europe" name="IMT_Nord_Europe" value="IMT_Nord_Europe" data-target="img_imtnordeurope" onclick="hide(this)"> IMT Nord Europe
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Mines_Albi" name="IMT_Mines_Albi" value="IMT_Mines_Albi"> IMT Mines Albi
+            <input class="checkbox_groupminestel" type="checkbox" id="Mines_Saint_Etienne_ISMIN" name="Mines_Saint_Etienne_ISMIN" value="Mines_Saint_Etienne_ISMIN" data-target="img_imtsaintetienne" onclick="hide(this)"> Mines Saint Etienne-ISMIN
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Mines_Ales" name="IMT_Mines_Ales" value="IMT_Mines_Ales"> IMT Mines Alès
+            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_Nancy" name="TELECOM_Nancy" value="TELECOM_Nancy" data-target="img_telecomnancy" onclick="hide(this)"> TELECOM Nancy
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="IMT_Nord_Europe" name="IMT_Nord_Europe" value="IMT_Nord_Europe"> IMT Nord Europe
+            <input class="checkbox_groupminestel" type="checkbox" id="Telecom_Physique_Strasbourg" name="Telecom_Physique_Strasbourg" value="Telecom_Physique_Strasbourg" data-target="img_tps" onclick="hide(this)"> Télécom Physique Strasbourg Informatique et Réseaux
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="Mines_Saint_Etienne_ISMIN" name="Mines_Saint_Etienne_ISMIN" value="Mines_Saint_Etienne_ISMIN"> Mines Saint Etienne-ISMIN
+            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_St_Etienne" name="TELECOM_St_Etienne" value="TELECOM_St_Etienne" data-target="img_telecomsaintetienne" onclick="hide(this)"> TELECOM St Etienne - Statut étudiant
             <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_Nancy" name="TELECOM_Nancy" value="TELECOM_Nancy"> TELECOM Nancy
-            <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="Telecom_Physique_Strasbourg" name="Telecom_Physique_Strasbourg" value="Telecom_Physique_Strasbourg"> Télécom Physique Strasbourg Informatique et Réseaux
-            <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_St_Etienne" name="TELECOM_St_Etienne" value="TELECOM_St_Etienne"> TELECOM St Etienne - Statut étudiant
-            <br>
-            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_SudParis" name="TELECOM_SudParis" value="TELECOM_SudParis"> TELECOM SudParis
+            <input class="checkbox_groupminestel" type="checkbox" id="TELECOM_SudParis" name="TELECOM_SudParis" value="TELECOM_SudParis" data-target="img_telecomsudparis" onclick="hide(this)"> TELECOM SudParis
             <br>
           </form>
         </div>
@@ -311,28 +311,73 @@
           <div class="left_box" style="background-color: lightslategray;">
             Banque X/ENS
           </div>
-          <div class="right_box"></div>
+          <div class="right_box">
+            <img id="img_ens_ulm" class="draggableimg hidden" src="IMG\XENS\logo_ens_ulm.jpg">
+            <img id="img_ens_saclay" class="draggableimg hidden" src="IMG\XENS\logo_ens_saclay.jpg">
+            <img id="img_ens_lyon" class="draggableimg hidden" src="IMG\XENS\logo_ens_lyon.png">
+            <img id="img_ens_rennes" class="draggableimg hidden" src="IMG\XENS\logo_ens_rennes.png">
+            <img id="img_x" class="draggableimg hidden" src="IMG\XENS\logo_x.png">
+          </div>
         </div>
 
         <div id="img_slot_centrale" class="hidden tier_row img_slot" >
           <div class="left_box" style="background-color: lightslategray;">
             Banque Centrale- Supélec
           </div>
-          <div class="right_box"></div>
+          <div class="right_box">
+            <img id="img_centralesupelec" class="draggableimg hidden" src="IMG\Centrale\logo_centralesupélec.png">
+            <img id="img_centralelyon" class="draggableimg hidden" src="IMG\Centrale\logo_centralelyon.jpg">
+            <img id="img_supoptique" class="draggableimg hidden" src="IMG\Centrale\logo_supoptique.png">
+            <img id="img_centralelille" class="draggableimg hidden" src="IMG\Centrale\logo_centralelille.png">
+            <img id="img_centralenantes" class="draggableimg hidden" src="IMG\Centrale\logo_centralenantes.png">
+            <img id="img_centralemed" class="draggableimg hidden" src="IMG\Centrale\logo_centralemed.png">
+            <img id="img_centralecasa" class="draggableimg hidden" src="IMG\Centrale\logo_centralecasa.jpg">
+            <img id="img_ensea" class="draggableimg hidden" src="IMG\Centrale\logo_ensea.png">
+            <img id="img_epf" class="draggableimg hidden" src="IMG\Centrale\logo_epf.png">
+            <img id="img_estp" class="draggableimg hidden" src="IMG\Centrale\logo_estp.png">
+          </div>
         </div>
 
         <div id="img_slot_minesponts" class="hidden tier_row img_slot" >
           <div class="left_box" style="background-color: lightslategray;">
             Banque Mines-Ponts
           </div>
-          <div class="right_box"></div>
+          <div class="right_box">
+            <img id="img_enscp" class="draggableimg hidden" src="IMG\MinesPonts\logo_enscp.png">
+            <img id="img_ensae" class="draggableimg hidden" src="IMG\MinesPonts\logo_ensae.png">
+            <img id="img_ensta" class="draggableimg hidden" src="IMG\MinesPonts\Logo_ENSTA.svg.png">
+            <img id="img_imtatlantique" class="draggableimg hidden" src="IMG\MinesPonts\logo_imtatlantique.png">
+            <img id="img_supaero" class="draggableimg hidden" src="IMG\MinesPonts\logo_supaero.png">
+            <img id="img_minesnancy" class="draggableimg hidden" src="IMG\MinesPonts\logo_minesnancy.png">
+            <img id="img_minessaintetienne" class="draggableimg hidden" src="IMG\MinesPonts\logo_minessaintetienne.png">
+            <img id="img_minesparis" class="draggableimg hidden" src="IMG\MinesPonts\logo_minesparis.jpg">
+            <img id="img_pontsparitech" class="draggableimg hidden" src="IMG\MinesPonts\logo_pontsparitech.png">
+            <img id="img_telecomparis" class="draggableimg hidden" src="IMG\MinesPonts\logo_telecomparis.png">
+          </div>
         </div>
 
         <div id="img_slot_minestel" class="hidden tier_row img_slot" >
           <div class="left_box" style="background-color: lightslategray;">
             Banque Mines-Télécom
           </div>
-          <div class="right_box"></div>
+          <div class="right_box">
+            <img id="img_eivp" class="draggableimg hidden" src="IMG\MinesTel\logo_eivp.png">
+            <img id="img_ensgnancy" class="draggableimg hidden" src="IMG\MinesTel\logo_ensgnancy.png">
+            <img id="img_ensggéo" class="draggableimg hidden" src="IMG\MinesTel\logo_ensggéo.png">
+            <img id="img_ensiie" class="draggableimg hidden" src="IMG\MinesTel\logo_ensiie.png">
+            <img id="img_enssat" class="draggableimg hidden" src="IMG\MinesTel\logo_enssat.png">
+            <img id="img_enstabretagne" class="draggableimg hidden" src="IMG\MinesTel\logo_enstabretagne.jpg">
+            <img id="img_entpe" class="draggableimg hidden" src="IMG\MinesTel\logo_entpe.png">
+            <img id="img_eurecom" class="draggableimg hidden" src="IMG\MinesTel\logo_eurecom.png">
+            <img id="img_minesalbi" class="draggableimg hidden" src="IMG\MinesTel\logo_minesalbi.jpg">
+            <img id="img_minesales" class="draggableimg hidden" src="IMG\MinesTel\logo_minesales.jpg">
+            <img id="img_imtnordeurope" class="draggableimg hidden" src="IMG\MinesTel\logo_imtnordeurope.jpg">
+            <img id="img_imtsaintetienne" class="draggableimg hidden" src="IMG\MinesTel\logo_imtsaintetienne.png">
+            <img id="img_telecomnancy" class="draggableimg hidden" src="IMG\MinesTel\logo_telecomnancy.png">
+            <img id="img_tps" class="draggableimg hidden" src="IMG\MinesTel\logo_tps.png">
+            <img id="img_telecomsaintetienne" class="draggableimg hidden" src="IMG\MinesTel\logo_telecomsaintetienne.png">
+            <img id="img_telecomsudparis" class="draggableimg hidden" src="IMG\MinesTel\logo_telecomsudparis.png">
+          </div>
         </div>
 
         <div id="img_slot_ccinp" class="hidden tier_row img_slot" >
@@ -349,7 +394,7 @@
 
   <footer>
     <p>
-      Property of &copy; Bari Industries - 2024 -All Rights Reserved
+      Property of &copy; Bari Industries - 2024 - All Rights Reserved
     </p>
   </footer>
 

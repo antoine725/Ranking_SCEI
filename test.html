@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+    <title>Classement écoles d'ingénieur SCEI</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/logo.png">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <script>
+        function selectAll(groupClass, selectAllCheckbox) {
+            const checkboxes = document.querySelectorAll(`.${groupClass}`);
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+                checkbox.dispatchEvent(new Event('change')); // Trigger the change event
+            });
         }
-        
-        .full-width-div {
-            width: 100%;
-            box-sizing: border-box; /* Inclut padding et bordure dans la largeur totale */
-            padding: 20px; /* Par exemple */
-            border: 2px solid #000; /* Par exemple */
-            background-color: lightblue; /* Par exemple */
+
+        function hide(checkbox) {
+            const targetId = checkbox.getAttribute('data-target');
+            const imgSlotId = checkbox.getAttribute('data-img');
+            const targetElement = document.getElementById(targetId);
+            const imgSlotElement = document.getElementById(imgSlotId);
+
+            if (checkbox.checked) {
+                targetElement.classList.remove('hidden');
+                if (imgSlotElement) {
+                    imgSlotElement.classList.remove('hidden');
+                }
+            } else {
+                targetElement.classList.add('hidden');
+                if (imgSlotElement) {
+                    imgSlotElement.classList.add('hidden');
+                }
+            }
         }
-    </style>
-    <title>Div pleine largeur</title>
+    </script>
 </head>
 <body>
-    <div class="full-width-div">
-        Je prends toute la largeur disponible de la page.
+
+    <!--Haut de page-->
+    <header>
+        <h1>Classement Post-prépa écoles d'ingénieur</h1>
+    </header>
+
+    <!--Contenu de la page-->
+    <div id="content">
+        <div id="menu_clickable">
+            <h2>Admissible aux oraux :</h2>
+            <div id="choix_concours">
+                <form>
+                    <input type="checkbox" id="xens" name="xens" value="xens" data-target="div_xens" data-img="img_slot_xens" onclick="hide(this)"> X/ENS
+                    <br>
+                    <input type="checkbox" id="centrale" name="centrale" value="centrale" data-target="div_centrale" data-img="img_slot_centrale" onclick="hide(this)"> Centrale-Supélec
+                    <br>
+                    <input type="checkbox" id="mines_ponts" name="mines_ponts" value="mines_ponts" data-target="div_mines_ponts" data-img="img_slot_minesponts" onclick="hide(this)"> Mines-Ponts
+                    <br>
+                    <input type="checkbox" id="mines_telecom" name="mines_telecom" value="mines_telecom" data-target="div_mines_telecom" data-img="img_slot_minestel" onclick="hide(this)"> Mines-Télécom
+                    <br>
+                    <input type="checkbox" id="ccinp" name="ccinp" value="ccinp" data-target="div_ccinp" data-img="img_slot_ccinp" onclick="hide(this)"> CCINP
+                    <br>
+                </form>
+            </div>
+
+            <div id="div_xens" class="hidden hidden">
+                <h3>Banque X/ENS</h3>
+                <input type="checkbox" id="select_all_groupxens" name="select_all_groupxens" onclick="selectAll('checkbox_groupxens', this)"> Tout sélectionner
+                <form>
+                    <input class="checkbox_groupxens" type="checkbox" id="ENS_Ulm" name="ENS_Ulm" value="ENS_Ulm" data-target="img_ens_ulm" data-img="img_slot_ens_ulm" onchange="hide(this)"> ENS Ulm
+                    <br>
+                    <input class="checkbox_groupxens" type="checkbox" id="ENS_Paris_Saclay" name="ENS_Paris_Saclay" value="ENS_Paris_Saclay" data-target="img_ens_saclay" data-img="img_slot_ens_saclay" onchange="hide(this)"> ENS Paris-Saclay
+                    <br>
+                    <input class="checkbox_groupxens" type="checkbox" id="ENS_de_Lyon" name="ENS_de_Lyon" value="ENS_de_Lyon" data-target="img_ens_lyon" data-img="img_slot_ens_lyon" onchange="hide(this)"> ENS de Lyon
+                    <br>
+                    <input class="checkbox_groupxens" type="checkbox" id="ENS_Rennes_Info" name="ENS_Rennes_Info" value="ENS_Rennes_Info" data-target="img_ens_rennes" data-img="img_slot_ens_rennes" onchange="hide(this)"> ENS Rennes Info
+                    <br>
+                    <input class="checkbox_groupxens" type="checkbox" id="ECOLE_POLYTECHNIQUE" name="ECOLE_POLYTECHNIQUE" data-target="img_x" value="ECOLE_POLYTECHNIQUE" data-img="img_slot_x" onchange="hide(this)"> ECOLE POLYTECHNIQUE
+                    <br>
+                </form>
+            </div>
+
+            <!-- Repeat similar structure for other concours -->
+        </div>
     </div>
+
 </body>
 </html>
